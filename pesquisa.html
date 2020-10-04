@@ -1,0 +1,98 @@
+<html>
+<head>
+	<title>.GEEKSTORE/Busca</title>
+        <link rel="stylesheet" href="estilo.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </head>
+</head>
+<body>
+	            <div class="container-fluid" >
+                <img id="logo" src="img/geekStore.png"> 
+                <input type="text" id="busca" placeholder="Buscar">
+                <img id="cadastro" src="img/cadastro2.png">
+            </div>
+            <div id="menu" class="MeuMenu">
+                <div class="dropdown">
+                    <button class="dropbtn">Temas</button>
+                    <div class="dropdown-content">
+                    <a href="#">Anime</a>
+                    <a href="#">Filme</a>
+                    <a href="#">Jogo</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Camisetas</button>
+                    <div class="dropdown-content">
+                    <a href="#">Anime</a>
+                    <a href="#">Filme</a>
+                    <a href="#">Jogo</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Acessorios</button>
+                    <div class="dropdown-content">
+                    <a href="#">Anime</a>
+                    <a href="#">Filme</a>
+                    <a href="#">Jogo</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Presentes</button>
+                    <div class="dropdown-content">
+                    <a href="#">Anime</a>
+                    <a href="#">Filme</a>
+                    <a href="#">Jogo</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Perfil</button>
+                    <div class="dropdown-content">
+                    <a href="#">Meus Dados</a>
+                    <a href="#">Meu Carrinho</a>
+                    <a href="#">Meus Pedidos</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-columns">
+                <div class="card" style="width:70%">
+                    <img class="card-img-top" src="img/produto01.png" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-body text-center">Canecas</h4>
+                        <p class="card-text">R$20/cada</p>
+                        <a href="detalhes.html" class="btn btn-success">Detalhes do produto</a></br></br>
+                        <a href="#" class="btn btn-info">Comprar</a>
+                    </div>
+                </div>
+             </div>
+
+
+
+
+
+  <script type="text/javascript" language="javascript">
+            var busca= document.getElementById("busca");
+            busca.addEventListener("keydown",function(e){
+                if (e.keyCode ==13) {
+                    redirecionar(e);
+                }
+            });
+            function redirecionar() {
+            var busca = document.getElementById("busca").value;
+            if (busca != "") {
+            window.location = "pesquisa.html";
+            }
+            } 
+        </script>             
+                
+</body>
+
+</html>
