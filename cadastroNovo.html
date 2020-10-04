@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Cadastro</title>
+        <link rel="stylesheet" href="estilo.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div>
+            <div class="MeuMenu" class="container-fluid">
+                <div class="dropdown">
+                    <button class="dropbtn">Temas</button>
+                    <div class="dropdown-content">
+                    <a href="#">Anime</a>
+                    <a href="#">Filme</a>
+                    <a href="#">Jogo</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Camisetas</button>
+                    <div class="dropdown-content">
+                    <a href="#">Anime</a>
+                    <a href="#">Filme</a>
+                    <a href="#">Jogo</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Acessorios</button>
+                    <div class="dropdown-content">
+                    <a href="#">Anime</a>
+                    <a href="#">Filme</a>
+                    <a href="#">Jogo</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Presentes</button>
+                    <div class="dropdown-content">
+                    <a href="#">Anime</a>
+                    <a href="#">Filme</a>
+                    <a href="#">Jogo</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+                <form>
+                    <div class="form-group">
+                        
+                        <label>*Nome: </label><input type="text1" id="txtnome" placeholder="Digite o seu nome completo" size="40" maxlength="55"/><br/><br/>
+                        
+                        <label>*Email: </label><input type="email" id="txtemail" placeholder="xxx@xxx.com.br" size="40" maxlength="55" /><br/><br/>
+                        
+                        <label>*Senha: </label><input type="password" id="senha1" placeholder="Digite sua senha" /><br/><br/>
+                        
+                        <label>*Confirmar senha: </label><input type="password" id="senha2" placeholder="Digite a senha novamente" /><br/><br/>
+                      
+                        <label>*CPF: </label><input type="cpf" id="txtcpf" placeholder="Digite o seu CPF"/><br/><br/>
+                        
+                        <label>*Telefone: </label><input type="cpf" id="txttel" placeholder="Digite o seu telefone" /><br/><br/></br>
+                        
+                            <div>
+                                <button id="btn2" class="btn btn-success" onclick="validar();" ><b>Cadastrar</b></button>
+                                <button id="btn2"class="btn btn-success"><b>Vitrine</b></button>
+                            </div>
+                    </div>
+                </form> 
+        </div>  
+    </body>
+</html>
+<script lang="javascript" src="prog.js"></script>

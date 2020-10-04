@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>.GEEKSTORE</title>
+        <link rel="stylesheet" href="estilo.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        </head>
+
+    <body>
+            <div class="container-fluid" >
+                <img id="logo" src="img/geekStore.png"> 
+                <input type="text" id="busca" placeholder="Buscar">
+                <img id="cadastro" src="img/cadastro2.png">
+            </div>
+            <div id="menu" class="MeuMenu">
+                <div class="dropdown">
+                    <button class="dropbtn">Temas</button>
+                    <div class="dropdown-content">
+                    <a href="#">Anime</a>
+                    <a href="#">Filme</a>
+                    <a href="#">Jogo</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Camisetas</button>
+                    <div class="dropdown-content">
+                    <a href="#">Anime</a>
+                    <a href="#">Filme</a>
+                    <a href="#">Jogo</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Acessorios</button>
+                    <div class="dropdown-content">
+                    <a href="#">Anime</a>
+                    <a href="#">Filme</a>
+                    <a href="#">Jogo</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Presentes</button>
+                    <div class="dropdown-content">
+                    <a href="#">Anime</a>
+                    <a href="#">Filme</a>
+                    <a href="#">Jogo</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Perfil</button>
+                    <div class="dropdown-content">
+                    <a href="#">Meus Dados</a>
+                    <a href="#">Meu Carrinho</a>
+                    <a href="#">Meus Pedidos</a>
+                    </div>
+                </div>
+
+            </div>
+
+            
+            <div class="card-columns">
+                <div class="card" style="width:70%">
+                    <img class="card-img-top" src="img/produto01.png" alt="Card image">
+                    <div class="card-body">
+                        <h4 id="CardNome"  class="card-body text-center">Canecas</h4>
+                        <p class="card-text">R$20/cada</p>
+                        <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
+                        <button href="#"  class="btn btn-info" data-toggle="modal" data-target="#myModal">Comprar</button>
+                    </div>
+                </div>
+                <div class="card" style="width:70%">
+                    <img class="card-img-top" src="img/produto02.png" alt="Card image">
+                    <div class="card-body">
+                        <h4 id="CardNome"  class="card-body text-center">Miniaturas</h4>
+                        <p class="card-text">R$50/cada</p>
+                        <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
+                        <a href="#" class="btn btn-info">Comprar</a>
+                    </div>
+                </div>
+                <div class="card" style="width:70%">
+                    <img class="card-img-top" src="img/produto03.png" alt="Card image">
+                    <div class="card-body">
+                        <h4 id="CardNome" class="card-body text-center">Chaveiros</h4>
+                        <p class="card-text">R$5/cada</p>
+                        <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
+                        <a href="#" class="btn btn-info">Comprar</a>
+                    </div>
+                </div>
+                <div class="card" style="width:70%">
+                    <img class="card-img-top" src="img/produto04.png" alt="Card image">
+                    <div class="card-body">
+                        <h4 id="CardNome" class="card-body text-center">Bottons</h4>
+                        <p class="card-text">R$5/cada</p>
+                        <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
+                        <a href="#" class="btn btn-info">Comprar</a>
+                    </div>
+                </div>
+                <div class="card" style="width:70%">
+                    <img class="card-img-top" src="img/produto05.png" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-body text-center">Camisetas</h4>
+                        <p class="card-text">R$50/cada</p>
+                        <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
+                        <a href="#" class="btn btn-info">Comprar</a>
+                    </div>
+                </div>
+                <div class="card" style="width:70%">
+                    <img class="card-img-top" src="img/produto06.png" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-body text-center">Almofadas</h4>
+                        <p class="card-text">R$20/cada</p>
+                        <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
+                        <a href="#" id="bt1" class="btn btn-info">Comprar</a>
+                        <p id="teste"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Carrinho</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <table class="table table-striped table-hover" id="tabelaItens">
+                <thead>
+                    <tr>
+                        <th class="col-4">Produto</th>
+                        <th class="col-3">Quantidade</th>
+                        <th class="col-3">Preço</th>
+                        <th class="col-2">subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-4 produto-imagem" id="itemIma"><img src="img/produto01.png"> Caneca personalizada</td>
+                        <td class="col-3">1 </td>
+                        <td class="col-3" id="itemPreco"></td>
+                        <td class="col-2">R$20,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Continuar comprando</button>
+          <button type="button" class="btn btn-info" ><a href="cesta.html">Finalizar compra</a></button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+        </body>
+</html>

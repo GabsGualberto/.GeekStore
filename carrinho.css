@@ -1,0 +1,171 @@
+.container-fluid{
+    background-color:  #4AE3B0;
+    width: 350px;
+    display: block;
+}
+.container-fluid img{
+    width: 80px;
+    height: 80px;
+    margin-left: 210px;
+}
+.container-fluid #busca{
+    width: 500px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    margin-left: 80px;
+    padding-left: 15px;
+}
+.container-fluid button {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    margin-left: 120px;
+}
+.container-fluid button i{
+    color: #fff;
+}
+
+.container-fluid .dropdown-menu{
+    background-color: #4AE3B0;
+    border:none;
+}
+#conta-dropdown button{
+    width: 160px;
+    color: #fff;
+}
+#conta-dropdown {
+    background-color: transparent;
+    display: inline;
+    margin-left: 50px;
+    
+}
+.container h3{
+    color: #606364;
+    padding-top: 25px;
+    font-weight: bold;
+}
+.container p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #606364;
+}
+.container #alerta{
+    font-size: 13px;
+}
+
+#bt-finalizar{
+    border-radius: 20px;
+    margin-top: 10px;
+    width: 250px;
+    background-color: #20c997;
+    border-color: #20c997;
+}
+#produto-imagem img{
+    width: 50px;
+    height: 50px;
+}
+#resumoPedido{
+    background-color: #ebedee;
+    border-radius: 15px;
+    margin-left: 15px;
+    margin-top: 16px;
+    padding: 15px;
+}
+#calculoFrete{
+    margin-top: 6px;
+    background-color: #ebedee;
+    border-radius: 15px;
+    padding: 15px;
+}
+#resumoPedido p{
+    margin-top: 2px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 25px;
+    border-top: solid 1px #c0c1c2;
+    color: #606364;
+
+}
+#resumoPedido  #dez-conto{
+    font-size: 11px;
+    border-top:none;
+    text-align: center;
+    padding: 5px;
+}
+
+#resumoPedido h4{
+    color: #606364;
+    text-align: center;
+
+}
+#quantidadeProduto input{
+    border-color: #20c997;
+    padding: 2px;
+    width: 50px;
+    
+}
+#quantidadeProduto button{
+    color: #20c997;
+    border-radius: 20px;
+}
+#bt-remover{
+    color: #ff6b6b;
+}
+#bt-ok{
+    background-color: #20c997;
+    color: #fff;
+    border-radius: 10px;
+}
+#input-cep{
+    height: 37px;
+}
+#p-cep a{
+    color: #0c8a64;
+}
+table button{
+    background-color: transparent;
+}
+
+@media (max-width: 767px)  {
+    #resumoPedido{
+        margin-top: 16px;
+        margin-left: 10px;
+        width: 95%;
+        background-color: #ebedee;
+        border-radius: 15px;
+        padding: 15px;
+    }
+    #calculoFrete{
+        margin-top: 6px;
+        margin-left: 10px;
+        width: 95%;
+        background-color: #ebedee;
+        border-radius: 15px;
+        padding: 15px;
+    }
+
+    .container-fluid img{
+        width: 80px;
+        height: 70px;
+    }
+    .container-fluid #busca{
+        width: 200px;
+        height: 40px;
+        border-radius: 15px;
+        border: none;
+        padding-left: 15px;
+    }
+    .container-fluid button {
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+
+    }
+    .container-fluid button i{
+        color: #fff;
+    }
+    #conta-dropdown {
+        display: none;
+    }
+}

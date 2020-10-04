@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carrinho.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+    <title>Carrinho</title>
+</head>
+<body>
+    <div class="container-fluid" >
+        <img id="logo" src="img/geekStore.png"> 
+        <input type="text" id="busca" placeholder="O que você esta procurando?">
+        <div id="conta-dropdown">
+            <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">
+                Minha Conta
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Minha Conta</a>
+                <a class="dropdown-item" href="#">Meus Pedidos</a>
+            </div>
+        </div>
+    <button><i class="fa fa-shopping-cart fa-2x"></i></button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>Carrinho</h3>
+
+                <p>Abaixo você confere os produtos do seu carrinho</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <div id="alerta" class="alert alert-success" role="alert">Os itens foram adicionados ao seu carrinho.<a class="alert-link" href="http://">Clique aqui</a> para continuar comprando</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped table-hover table-bordered table-responsive-sm" id="tabelaItens">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Subtotal</th>
+                            <th>Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="produto-imagem"><img src="img/produto01.png"> Caneca personalizada</td>
+                            <td id="itemPreco">20,00</td>
+                            <td  id="quantidadeProduto">
+                                <button id="bt-mais" class="btn"><i class="fa fa-plus fa-xs"></i></button>
+                                <input type="text" maxlength="5" readonly placeholder="1"/>
+                                <button id="bt-menos" class="btn"><i class="fa fa-minus fa-xs"></i></button>
+                            </td>
+                            <td >20,00</td>
+                            <td ><button id="bt-remover"class="btn"><i class="fa fa-trash fa-xs "></i></button></td>
+                        </tr>
+                        <tr>
+                            <td id="produto-imagem"><img src="img/produto01.png"> Caneca personalizada</td>
+                            <td id="itemPreco">20,00</td>
+                            <td  id="quantidadeProduto">
+                                <button id="bt-mais" class="btn"><i class="fa fa-plus fa-xs"></i></button>
+                                <input type="text" maxlength="5" readonly placeholder="1"/>
+                                <button id="bt-menos" class="btn"><i class="fa fa-minus fa-xs"></i></button>
+                            </td>
+                            <td >20,00</td>
+                            <td ><button id="bt-remover"class="btn"><i class="fa fa-trash fa-xs "></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-sm-12 " id="calculoFrete">
+                <p>Calcule frete e prazo</p>
+                <input type="text" id="input-cep" placeholder="CEP">
+                <button id="bt-ok" class="btn ">ok</button>
+                <p id="p-cep"><a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="new">Não sei meu cep</a></p>
+                <p>As opções de envio serão atualizadas durante a finalização da compra. </p>
+                <p>Escolha o melhor frete para você:</p>
+                <p style="color: #ff0000"><b>Digite seu endereço para ver as opções de entrega.</b> </p>
+            </div>
+            <div class="col-lg-3 col-sm-12" id="resumoPedido">
+                <h4>Resumo do pedido</h4>
+                <br>
+                <p>1 produto                  R$20,00</p>
+                <br>
+                <p><b>Total                      R$20,00</b></p>
+                <button class="btn btn-primary" id="bt-finalizar">Finalizar Pedido</button>
+                <br>
+                <p id="dez-conto">Possui cupom de desconto?
+                    Você poderá usá-los na etapa de pagamento. </p>
+            </div>
+        </div>
+        <div class="row" id="rodape">
+            quem sabe um dia né
+        </div>
+    </div>
+    
+</body>
+</html>
+<script src="carrinho.js" lang="javascript">
+
+</script>
