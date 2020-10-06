@@ -1,0 +1,245 @@
+.container-fluid{
+    background-color: #fafaff;
+    
+}
+
+.form-group button{
+    width: 350px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: #20c997;
+    color: #fafaff;
+}
+.form-group input{
+    width: 350px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.form-control{
+    border-radius: 10px;
+}
+
+.form-group p{
+    
+}
+
+.container-fluid button{
+    background-color: transparent;
+    border: none;
+    color: #fafaff;
+    margin-top: 10%;
+}
+
+.MeuMenu{
+    background-color:#5fdfb4;
+    text-align: center;
+    width: 100%;
+    height: 65px;
+}
+
+.dropbtn {
+  background-color:#5fdfb4;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 5%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #4AE3B0;
+  }
+
+.dropdown:hover .dropbtn {
+    color: black;
+}
+
+#corpo{
+    float: right;
+    margin-top: 5%;
+}
+
+#corpo h2{
+    margin-left: 0px;
+    font-weight: 600;
+}
+#corpo p{
+    margin-bottom: 4%;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#menu button i{
+    background-color: transparent;
+    color:#fafaff;
+    visibility: hidden;
+}
+
+
+#cabecalho{
+    background-color: #4AE3B0;
+}
+
+#logo{
+    width: 80px;
+    height: 80px;
+    margin: 2px;
+    margin-left: 80%;
+}
+
+#topo{
+    background-color: #4AE3B0;
+}
+
+#cadastro{
+    width: 5%;
+    float: right;
+    margin-top:2%;
+    margin-right: 4%;
+}
+#txtnome{
+    border-radius: 10px;
+    padding: 4px;
+}
+#txtemail{
+    border-radius: 10px;
+    padding: 4px;
+}
+#senha1{
+    border-radius: 10px;
+    padding: 4px;
+}
+
+#senha2{
+    border-radius: 10px;
+    padding: 4px;
+}
+
+#txtcpf{
+    border-radius: 10px;
+    padding: 4px;
+}
+
+#txttel{
+    border-radius: 10px;
+    padding: 4px;
+}
+
+#busca{
+    border-radius: 25px;
+    border: solid 1px transparent;
+    margin-left: 20%;
+    margin-top: 3%;
+    height: 40px;
+    padding-left: 25px;
+    font-size: 13px;
+}
+
+#rodape{
+    margin-top: 50px;
+    margin-bottom: 0px;
+    background-color: #000;
+    color: #f8f8ff;
+    width: 100%;
+    height: 60px;
+    font-size: 12px;
+    font-weight: bold;
+}
+#rodape p{
+    padding: 5px;
+    text-align: center;
+    margin-left: 200px;
+}
+
+label{
+    width: 10%;
+    display: inline-table;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    background-color: #4AE3B0;
+}
+
+input[type=text] {
+    float: center;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+input[type=text] {
+    width: 350px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+input[type=text]:focus {
+    width: 70%;
+    border-color: transparent;
+  }
+
+@media (max-width: 795px){
+    #menu .dropdown{
+        visibility: hidden;
+    }
+    #menu button i{
+        visibility: visible;
+        
+    }
+    #menu button i:hover{
+        cursor: pointer;
+    }
+    #corpo{
+        margin-top: 10%;
+    }
+    #busca{
+        width: 200px;
+        font-size: 11px;
+        margin-left: 3%;
+        margin-top: 15px;
+    }
+    #logo{ 
+        width: 70px;
+        height: 70px;
+        margin-left: 0px;
+    }
+    #bt-conta{
+        margin-top: 16px;
+        margin-left:  35%;
+    }
+    #bt-carrinho{
+        display: none;
+    }
+ 
+}
