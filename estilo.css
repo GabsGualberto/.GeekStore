@@ -168,3 +168,68 @@ input[type=text] {
   .dropdown:hover .dropbtn {
       color: black;
     }
+
+   
+
+/*eu que fiz*/ 
+
+#detalhes{
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  
+
+}
+
+#detalhes #modal-image{
+    border-radius: 5px;
+    width: 40%;
+    height: 80%;
+    border: 8px solid #CCC;
+        }
+#detalhes #btn-alinh{
+  width: 60%;
+  height: 80%;
+}
+#detalhes #btn-alinh #btnLoja {
+  width: 50%;
+  height: 80%;
+}
+
+.relative2{
+position: absolute;
+right:    0;
+bottom:   0;
+}
+.relative3{
+  position: relative;
+  left: 0px;
+  top: 20px;
+
+}
+.corprincipal{
+background-color: #4AE3B0;
+}
+.relative{
+  position: relative;
+  left: 20px;
+
+}
+
+.corpreco{
+  color:  red;
+}
+.corsegundaria{
+  color: grey;
+}
+.useFont{
+   font-family: Arial, Helvetica, sans-serif;
+}
+.usetext{
+font-size: 10px; 
+}
+.cor3{
+  color: #808080;
+}.zerastyle{
+  font-size: 10px; 
+
+}
