@@ -2,12 +2,7 @@
     background-color: #fafaff;
     font-size: medium;
 }
-.container{
-    align-items: center;
-}
-#cabecalho{
-    background-color: #4AE3B0;
-}
+
 .form-group button{
     width: 350px;
     height: 40px;
@@ -21,6 +16,12 @@
     height: 40px;
     margin-bottom: 15px;
 }
+.form-group input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    margin-right: 15px;
+}
 .form-control{
     border-radius: 10px;
 }
@@ -31,36 +32,92 @@
     margin-top: 10%;
 }
 
+.MeuMenu{
+    background-color:#5fdfb4;
+    text-align: center;
+    width: 100%;
+    margin-top: -30px;
+    height: 65px;
+}
+
+.dropbtn {
+  background-color:#5fdfb4;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 5%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #4AE3B0;
+  }
+
+.dropdown:hover .dropbtn {
+    color: black;
+}
+
+#corpo{
+    float: right;
+    margin-top: 5%;
+}
+
+#corpo h2{
+    margin-left: 0px;
+    font-weight: 600;
+}
+#corpo p{
+    margin-bottom: 5%;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+#menu button i{
+    background-color: transparent;
+    color:#fafaff;
+    visibility: hidden;
+}
+
+
+#cabecalho{
+    background-color: #4AE3B0;
+}
+
 #logo{
     width: 80px;
     height: 80px;
     margin: 2px;
     margin-left: 80%;
 }
-#bt-r{
-    display: none;
-}
+
 #topo{
     background-color: #4AE3B0;
-}
-
-label{
-    width: 10%;
-    display: inline-table;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-    background-color: #4AE3B0;
-}
-
-input[type=text] {
-    float: center;
-    padding: 6px;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
 }
 
 #cadastro{
@@ -69,19 +126,14 @@ input[type=text] {
     margin-top:2%;
     margin-right: 4%;
 }
-
-
 #txtnome{
     border-radius: 10px;
     padding: 4px;
 }
-
-
 #txtemail{
     border-radius: 10px;
     padding: 4px;
 }
-
 #senha1{
     border-radius: 10px;
     padding: 4px;
@@ -112,74 +164,79 @@ input[type=text] {
     font-size: 13px;
 }
 
+#rodape{
+    margin-top: 50px;
+    margin-bottom: 0px;
+    background-color: #000;
+    color: #f8f8ff;
+    width: 100%;
+    height: 60px;
+    font-size: 12px;
+    font-weight: bold;
+}
+#rodape p{
+    padding: 5px;
+    text-align: center;
+    margin-left: 200px;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+    background-color: #4AE3B0;
+}
+
+input[type=text] {
+    float: center;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
 input[type=text] {
     width: 350px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
   }
   
-  input[type=text]:focus {
+input[type=text]:focus {
     width: 70%;
     border-color: transparent;
   }
 
-.MeuMenu{
-      background-color:#5fdfb4;
-      text-align: center;
-      width: 100%;
-  }
-
-.dropbtn {
-    background-color:#5fdfb4;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    margin-left: 5%;
-  }
-  
+@media (max-width: 795px){
+    #menu .dropdown{
+        visibility: hidden;
+    }
+    #menu button i{
+        visibility: visible;
+        
+    }
+    #menu button i:hover{
+        cursor: pointer;
+    }
+    #corpo{
+        margin-top: 10%;
+    }
+    #busca{
+        width: 200px;
+        font-size: 11px;
+        margin-left: 3%;
+        margin-top: 15px;
+    }
+    #logo{ 
+        width: 70px;
+        height: 70px;
+        margin-left: 0px;
+    }
+    #bt-conta{
+        margin-top: 16px;
+        margin-left:  35%;
+    }
+    #bt-carrinho{
+        display: none;
+    }
  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  
-  .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-
-  .dropdown:hover .dropdown-content {
-      display: block;
-      background-color: #4AE3B0;
-    }
-  
-  
-  .dropdown:hover .dropbtn {
-      color: black;
-    }
-    @media (max-width: 795px){
-        #bt-r{
-            display: block;
-        }
-        #menu{
-            display: none;
-        }
-    }
+}
