@@ -1,0 +1,171 @@
+.container{
+    background-color: #fafaff;
+    font-size: medium;
+}
+.container-fluid{
+    background-color: #4AE3B0;
+}
+
+.form-group{
+    margin-left: 35%;
+    margin-top: 9%;
+}
+
+.form-control{
+    border-radius: 10px;
+}
+.container-fluid button{
+    background-color: transparent;
+    border: none;
+    color: #fafaff;
+    margin-top: 10%;
+}
+
+#logo{
+    width: 80px;
+    height: 80px;
+    margin: 2px;
+    margin-left: 80%;
+}
+#bt-r{
+    display: none;
+}
+#topo{
+    background-color: #4AE3B0;
+}
+
+label{
+    width: 10%;
+    display: inline-table;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    background-color: #4AE3B0;
+}
+
+input[type=text] {
+    float: center;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+#cadastro{
+    width: 5%;
+    float: right;
+    margin-top:2%;
+    margin-right: 4%;
+}
+
+
+#txtnome{
+    border-radius: 10px;
+    padding: 4px;
+}
+
+
+#txtemail{
+    border-radius: 10px;
+    padding: 4px;
+}
+
+#senha1{
+    border-radius: 10px;
+    padding: 4px;
+}
+
+#senha2{
+    border-radius: 10px;
+    padding: 4px;
+}
+
+#txtcpf{
+    border-radius: 10px;
+    padding: 4px;
+}
+
+#txttel{
+    border-radius: 10px;
+    padding: 4px;
+}
+
+#busca{
+    border-radius: 25px;
+    border: solid 1px transparent;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+input[type=text] {
+    width: 350px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    width: 20%;
+    border-color: transparent;
+  }
+
+.MeuMenu{
+      background-color:#5fdfb4;
+      text-align: center;
+  }
+
+.dropbtn {
+    background-color:#5fdfb4;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 5%;
+  }
+  
+ 
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+
+  .dropdown:hover .dropdown-content {
+      display: block;
+      background-color: #4AE3B0;
+    }
+  
+  
+  .dropdown:hover .dropbtn {
+      color: black;
+    }
+    @media (max-width: 795px){
+        #bt-r{
+            display: block;
+        }
+        #menu{
+            display: none;
+        }
+    }

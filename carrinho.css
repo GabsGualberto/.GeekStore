@@ -1,6 +1,5 @@
 .container-fluid{
     background-color:  #4AE3B0;
-    
     display: block;
 }
 .container-fluid img{
@@ -108,7 +107,6 @@
 #resumoPedido h4{
     color: #606364;
     text-align: center;
-
 }
 #quantidadeProduto input{
     border-color: #20c997;
@@ -135,10 +133,50 @@
     color: #0c8a64;
 }
 #rodape{
+    margin-top: 50px;
     background-color: #000;
+    color: #f8f8ff;
+    width: 100%;
+    height: 60px;
+    font-size: 12px;
+    font-weight: bold;
 }
+#rodape p{
+    padding: 5px;
+    text-align: center;
+    margin-left: 200px;
+}
+
 table button{
     background-color: transparent;
+}
+
+#card-frete{
+    width: 13rem;
+    border-radius: 15px;
+    text-align: center;
+}
+#card-frete input{
+    margin-left: 5  0%;
+    border-bottom:solid 1px black;
+}
+#card-frete h5{
+    text-transform: uppercase;
+    color: #606364;
+    font-weight: 600;
+    border-bottom: solid 1px #969494;
+    padding-bottom: 10px;   
+}
+#card-frete p{
+    font-weight: 500;
+    color: #606364;
+    margin-top: 10px;
+    
+}
+
+#card-frete:hover {
+    cursor: pointer;
+    
 }
 
 @media (max-width: 795px)  {
@@ -179,5 +217,10 @@ table button{
     .container-fluid #busca{
         width: 180px;
         font-size: 11px;
+    }
+    #rodape p{
+        padding: 5px;
+        text-align: center;
+        margin-left: 100px;
     }
 }
