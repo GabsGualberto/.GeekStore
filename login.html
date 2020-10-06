@@ -12,14 +12,13 @@
         </head>
 
     <body>
-        <div>
             <div class="container-fluid" >
-                <div class="row">
+                <div class="row" id="cabecalho">
                     <div class="col-1 col-sm-3 col-md-4 col-lg-3">
                         <img id="logo" src="img/geekStore.png"> 
                     </div>
                     <div class="col-3 col-sm-3 col-md-4 col-lg-5">
-                        <input type="text" id="busca" placeholder="Buscar">
+                        <input type="text" id="busca" placeholder="O que você está procurando?">
                     </div>
                     <div class="col-1 col-sm-3 col-md-2 col-lg-2">
                         <button id="bt-carrinho"><i class="fa fa-user-circle fa-2x"></i></button>
@@ -28,58 +27,57 @@
                         <button id="bt-carrinho"><i class="fa fa-shopping-cart fa-2x"></i></button>
                     </div>
                 </div>
-            </div>
-            <div id="menu" class="MeuMenu">
-                    <button id="bt-r"><i class="fa fa-bars"></i></button>
-                <div class="dropdown">
-                    <button class="dropbtn">Temas</button>
-                    <div class="dropdown-content">
-                    <a href="#">Anime</a>
-                    <a href="#">Filme</a>
-                    <a href="#">Jogo</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Camisetas</button>
-                    <div class="dropdown-content">
-                    <a href="#">Anime</a>
-                    <a href="#">Filme</a>
-                    <a href="#">Jogo</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Acessorios</button>
-                    <div class="dropdown-content">
-                    <a href="#">Anime</a>
-                    <a href="#">Filme</a>
-                    <a href="#">Jogo</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Presentes</button>
-                    <div class="dropdown-content">
-                    <a href="#">Anime</a>
-                    <a href="#">Filme</a>
-                    <a href="#">Jogo</a>
-                    </div>
-                </div>
-            </div>
-
-            <form>
-                <div class="form-group">
-            
-                    <label>*Email: </label><input type="email" id="txtemail" placeholder="xxx@xxx.com.br" size="40" maxlength="55" /><br/><br/>
-                    
-                    <label>*Senha: </label><input type="password" id="senha1" placeholder="Digite sua senha" /><br/><br/>
-                        <div>
-                            <button id="btn2" class="btn btn-success"><b>Entrar</b></button>
+                <div class="row" id="menu">
+                    <div id="menu" class="MeuMenu">
+                        <button id="bt-r"><i class="fa fa-bars"></i></button>
+                        <div class="dropdown">
+                            <button class="dropbtn">Temas</button>
+                            <div class="dropdown-content">
+                                <a href="#">Anime</a>
+                                <a href="#">Filme</a>
+                                <a href="#">Jogo</a>
+                            </div>
                         </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">Camisetas</button>
+                            <div class="dropdown-content">
+                                <a href="#">Anime</a>
+                                <a href="#">Filme</a>
+                                <a href="#">Jogo</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">Acessorios</button>
+                            <div class="dropdown-content">
+                                <a href="#">Anime</a>
+                                <a href="#">Filme</a>
+                                <a href="#">Jogo</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">Presentes</button>
+                            <div class="dropdown-content">
+                                <a href="#">Anime</a>
+                                <a href="#">Filme</a>
+                                <a href="#">Jogo</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-            </form> 
-
-        </div> 
+                <div class="container">
+                    <h2>Login.</h2>
+                    <p>Você precisa estar logado para comprar nossos produtos</p>
+                    <div class="row">
+                        <form class="form-group">
+                            <label>Email: </label><input class="form-control" type="email" id="txtemail" placeholder="xxx@xxx.com.br" size="40" maxlength="55" />
+                            <label>Senha: </label><input class="form-control" type="password" id="senha1" placeholder="Digite sua senha" />
+                            <button id="btn2" class="btn "><b>Entrar</b></button>
+                            <p>Não tem uma conta? <a href="#">Se cadastre</a></p>
+                            <a href="#">Esqueceu a senha?</a>
+                        </form> 
+                    </div>
+                </div>
+            </div>
         </body>
 </html>

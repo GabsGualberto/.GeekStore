@@ -1,16 +1,26 @@
-.container{
+.container-fluid{
     background-color: #fafaff;
     font-size: medium;
 }
-.container-fluid{
+.container{
+    align-items: center;
+}
+#cabecalho{
     background-color: #4AE3B0;
 }
-
-.form-group{
-    margin-left: 35%;
-    margin-top: 9%;
+.form-group button{
+    width: 350px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: #20c997;
+    color: #fafaff;
 }
-
+.form-group input{
+    width: 350px;
+    height: 40px;
+    margin-bottom: 15px;
+}
 .form-control{
     border-radius: 10px;
 }
@@ -97,6 +107,9 @@ input[type=text] {
     border: solid 1px transparent;
     margin-left: 20%;
     margin-top: 3%;
+    height: 40px;
+    padding-left: 25px;
+    font-size: 13px;
 }
 
 input[type=text] {
@@ -106,13 +119,14 @@ input[type=text] {
   }
   
   input[type=text]:focus {
-    width: 20%;
+    width: 70%;
     border-color: transparent;
   }
 
 .MeuMenu{
       background-color:#5fdfb4;
       text-align: center;
+      width: 100%;
   }
 
 .dropbtn {
