@@ -181,31 +181,22 @@ input[type=text] {
 }
 
 #detalhes #modal-image{
-    border-radius: 5px;
     width: 40%;
-    height: 80%;
-    border: 8px solid #CCC;
+    
+
         }
 #detalhes #btn-alinh{
   width: 60%;
-  height: 80%;
+  
+  position: absolute;
+  right: 10%;
 }
 #detalhes #btn-alinh #btnLoja {
   width: 50%;
   height: 80%;
 }
 
-.relative2{
-position: absolute;
-right:    0;
-bottom:   0;
-}
-.relative3{
-  position: relative;
-  left: 0px;
-  top: 20px;
 
-}
 .corprincipal{
 background-color: #4AE3B0;
 }
@@ -231,5 +222,11 @@ font-size: 10px;
   color: #808080;
 }.zerastyle{
   font-size: 10px; 
+}
+@media (max-width: 576px)  {
+  #detalhes #modal-image{
+    width: 40%;
+    
 
+        }
 }
