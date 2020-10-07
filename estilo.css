@@ -100,9 +100,9 @@ label[for="ch-menu"]{
 .menu ul{
   background-color: #5fdfb4;
 }
-/*#temas{
+#temas{
   margin-left: 30%;
-}*/
+}
 
 #corpo{
   float: right;
@@ -283,30 +283,3 @@ input[type=text]:focus {
 
 }
 
-.btn{
-    padding: 4px;
-    text-decoration: none;
-    margin-right: 36%;
-}
-
-
-  .card {
-    width: 80%;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 4%;
-    position: relative;
-  }
-
-@media screen and (max-width: 620px) {
-  .container {
-    width: 100%;
-  }
-
-  .card {
-    width: 100%;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 4%;
-  }
-}
