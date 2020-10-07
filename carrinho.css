@@ -1,6 +1,5 @@
 .container-fluid{
     background-color:  #4AE3B0;
-    
     display: block;
 }
 .container-fluid img{
@@ -178,6 +177,9 @@ table button{
 #card-frete:hover {
     cursor: pointer;
     
+}
+#input-cep{
+    width: 200px;
 }
 
 @media (max-width: 795px)  {
