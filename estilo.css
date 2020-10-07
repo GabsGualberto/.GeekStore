@@ -1,24 +1,26 @@
 
-.card-columns{
-    border: white;
-    margin-top: 10%;
-    margin-left: 10%;
-    
+.card {
+  width: 90%;
+  height: 8 0%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 40%;
+  text-align: center;
+  border-style: none;
 }
-.card{
-  width: 800%;
+
+.card p{
+font-size: 13px;
 }
+.card-text{
+font-size: 16px;
+}
+.card:hover{
+box-shadow: 0 2px 4px 0 rgba(43, 43, 43, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.2);
+}
+
 .form-control{
     border-radius: 10px;
-}
-
-.card-img-top{
-    border: white;
-}
-
-.card-body{
-    border: white;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .container-fluid{
@@ -49,17 +51,15 @@
 .form-control{
   border-radius: 10px;
 }
-.container-fluid button{
-  background-color: transparent;
-  border: none;
-  color: #fafaff;
-  margin-top: 10%;
-}
+
 .menu{
   width: 100%;
   height: 60px;
   background-color:#5fdfb4;
   font-family: Arial;
+  z-index: 999;
+  position: relative;
+  
 }
 .menu ul{
   list-style: none;
@@ -84,7 +84,6 @@
 }
 .menu ul li:hover ul{
   visibility: visible;
-  
 }
 .menu ul ul li{
   float: none;
@@ -115,7 +114,9 @@ label[for="ch-menu"]{
 .menu ul{
   background-color: #5fdfb4;
 }
-
+#temas{
+  margin-left: 30%;
+}
 
 #corpo{
   float: right;
@@ -214,7 +215,16 @@ label[for="ch-menu"]{
   margin-left: 200px;
 }
 
+.container-fluid button {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  margin-top: 15px;
 
+}
+.container-fluid button i{
+  color: #fff;
+}
 a{
   text-decoration: none;
   color: white;
@@ -241,6 +251,9 @@ input[type=text]:focus {
 }
 
 @media (max-width: 800px){
+  #temas{
+    margin-left: 0;
+  }
   label[for="ch-menu"]{
     display: block;
   }
@@ -295,51 +308,3 @@ input[type=text]:focus {
 
 }
 
-#detalhes #modal-image{
-    width: 40%;
-    
-
-        }
-#detalhes #btn-alinh{
-  width: 60%;
-  
-  position: absolute;
-  right: 10%;
-}
-#detalhes #btn-alinh #btnLoja {
-  width: 50%;
-  height: 80%;
-}
-
-
-.corprincipal{
-background-color: #4AE3B0;
-}
-
-
-.card {
-  width: 80%;
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-top: 4%;
-}
-
-@media screen and (max-width: 620px) {
-.container {
-  width: 100%;
-}
-.card {
-  width: 70%;
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-top: 4%;
-}
-}
-
-@media (max-width: 576px)  {
-  #detalhes #modal-image{
-    width: 40%;
-    
-
-        }
-}
