@@ -265,6 +265,8 @@ input[type=text]:focus {
   .menu ul li:hover ul{
     height: auto;
     max-height: 200px;
+    
+    line-height: 1rem;
   }
   #ch-menu{
     display: none;
@@ -293,7 +295,6 @@ input[type=text]:focus {
 
 }
 
-<<<<<<< HEAD
 #detalhes #modal-image{
     width: 40%;
     
@@ -314,44 +315,27 @@ input[type=text]:focus {
 .corprincipal{
 background-color: #4AE3B0;
 }
-.relative{
-  position: relative;
-  left: 20px;
-=======
-.btn{
-    padding: 4px;
-    text-decoration: none;
-    margin-right: 36%;
+
+
+.card {
+  width: 80%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 4%;
 }
-
-
-  .card {
-    width: 80%;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 4%;
-    position: relative;
-  }
->>>>>>> 6f027030b8159b351f6caeeb41e7d8acfa4b4e69
 
 @media screen and (max-width: 620px) {
-  .container {
-    width: 100%;
-  }
+.container {
+  width: 100%;
+}
+.card {
+  width: 70%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 4%;
+}
+}
 
-  .card {
-    width: 100%;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 4%;
-  }
-}
-<<<<<<< HEAD
-.cor3{
-  color: #808080;
-}.zerastyle{
-  font-size: 10px; 
-}
 @media (max-width: 576px)  {
   #detalhes #modal-image{
     width: 40%;
@@ -359,8 +343,3 @@ background-color: #4AE3B0;
 
         }
 }
-
-
-
-=======
->>>>>>> 6f027030b8159b351f6caeeb41e7d8acfa4b4e69
