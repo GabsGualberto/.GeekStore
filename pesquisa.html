@@ -14,13 +14,24 @@
     <div class="container-fluid" >
         <div class="row" id="cabecalho">
             <div class="col-lg-2 col-sm-3 col-3 col-md-3">
-                <img id="logo" src="img/geekStore.png"> 
+                <a href="vitrine.html"><img id="logo" src="img/geekStore.png"></a>
             </div>
             <div class="col-lg-6 col-sm-5 col-5 col-md-5">
                 <input type="text" id="busca" placeholder="O que você está procurando?">
             </div>
             <div class="col-lg-2 col-sm-4 col-4  col-md-2">
-                <button id="bt-conta"><i class="fa fa-user-circle fa-2x"></i></button>
+                <button id="btn-usuario" onclick="menuFunction()" ><i class="fa fa-user-circle fa-2x"></i></button>
+                <div class="nav margin-top" style="display:none;">
+                    <ul id="menuesquerda">
+                        <div class="row">
+                            <a href="login.html" class="menuItens">Login</a>
+                        </div>
+                        <div class="row">
+                            <a href="cadastroNovo.html" class="menuItens">Cadastro</a>
+                        </div>
+                    </ul>
+                    
+                    </div>
             </div>
             <div class="col-lg-2  col-md-2">
                 <button id="bt-carrinho"><i class="fa fa-shopping-cart fa-2x"></i></button>
@@ -110,7 +121,38 @@
             if (busca != "") {
             window.location = "pesquisa.html";
             }
-            } 
+            }
+            
+            
+        $("#btn-usuario").click(function(){
+            if(!$(".nav").hasClass('open')){
+                openMenu();
+            }else{
+                CloseMenu();
+            }
+        });
+        function openMenu(){
+            $(function(){
+                $('.nav').addClass('open').show(300);
+            })
+        }
+        function CloseMenu(){
+            $(function(){
+                $('.nav').removeClass('open').hide(300)
+            })
+        }
+        var busca= document.getElementById("busca");
+    busca.addEventListener("keydown",function(e){
+        if (e.keyCode ==13) {
+            redirecionar(e);
+        }
+    });
+    function redirecionar() {
+    var busca = document.getElementById("busca").value;
+    if (busca != "") {
+    window.location = "pesquisa.html";
+    }
+    } 
     </script>             
                 
 </body>
