@@ -1,3 +1,6 @@
-Todo:
-[] deixar as coisa responsiva
-[] adicionar as funçao dos botoes
+Devera ser aplicado:
+    [x]Formulário com validação javascript/jquery  
+	[x]	utilize CSS com media queries
+	[x]	utilize CSS em cascata
+	[x]	utilize recursos do HTML5
+	[]	tenha um menu criado em JQUERY/BOOTSTRAP que navegue entre as páginas (cadastro e lista)
