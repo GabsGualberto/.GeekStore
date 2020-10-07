@@ -2,76 +2,94 @@
 <html>
     <head>
         <title>Cadastro</title>
-        <link rel="stylesheet" href="estilo.css" />
+        <link rel="stylesheet" href="cadastro.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </head>
-
     <body>
-        <div>
-            <div class="MeuMenu" class="container-fluid">
-                <div class="dropdown">
-                    <button class="dropbtn">Temas</button>
-                    <div class="dropdown-content">
-                    <a href="#">Anime</a>
-                    <a href="#">Filme</a>
-                    <a href="#">Jogo</a>
-                    </div>
+        <div class="container-fluid" >
+            <div class="row" id="cabecalho">
+                <div class="col-lg-2 col-sm-3 col-3 col-md-3">
+                    <img id="logo" src="img/geekStore.png"> 
                 </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Camisetas</button>
-                    <div class="dropdown-content">
-                    <a href="#">Anime</a>
-                    <a href="#">Filme</a>
-                    <a href="#">Jogo</a>
-                    </div>
+                <div class="col-lg-6 col-sm-5 col-5 col-md-5">
+                    <input type="text" id="busca" placeholder="O que você está procurando?">
                 </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Acessorios</button>
-                    <div class="dropdown-content">
-                    <a href="#">Anime</a>
-                    <a href="#">Filme</a>
-                    <a href="#">Jogo</a>
-                    </div>
+                <div class="col-lg-2 col-sm-4 col-4  col-md-2">
+                    <button id="bt-conta"><i class="fa fa-user-circle fa-2x"></i></button>
                 </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Presentes</button>
-                    <div class="dropdown-content">
-                    <a href="#">Anime</a>
-                    <a href="#">Filme</a>
-                    <a href="#">Jogo</a>
-                    </div>
+                <div class="col-lg-2  col-md-2">
+                    <button id="bt-carrinho"><i class="fa fa-shopping-cart fa-2x"></i></button>
                 </div>
-
             </div>
-        </div>
-
-                <form>
-                    <div class="form-group">
-                        
-                        <label>*Nome: </label><input type="text1" id="txtnome" placeholder="Digite o seu nome completo" size="40" maxlength="55"/><br/><br/>
-                        
-                        <label>*Email: </label><input type="email" id="txtemail" placeholder="xxx@xxx.com.br" size="40" maxlength="55" /><br/><br/>
-                        
-                        <label>*Senha: </label><input type="password" id="senha1" placeholder="Digite sua senha" /><br/><br/>
-                        
-                        <label>*Confirmar senha: </label><input type="password" id="senha2" placeholder="Digite a senha novamente" /><br/><br/>
-                      
-                        <label>*CPF: </label><input type="cpf" id="txtcpf" placeholder="Digite o seu CPF"/><br/><br/>
-                        
-                        <label>*Telefone: </label><input type="cpf" id="txttel" placeholder="Digite o seu telefone" /><br/><br/></br>
-                        
-                            <div>
-                                <button id="btn2" class="btn btn-success" onclick="validar();" ><b>Cadastrar</b></button>
-                                <button id="btn2"class="btn btn-success"><b>Vitrine</b></button>
-                            </div>
+            <div class="row">
+                <div id="menu" class="MeuMenu">
+                    <div class="dropdown">
+                        <button id="bt-menu" class="dropbtn"><i class="fa fa-bars fa-2x"></i> </button>
                     </div>
-                </form> 
+                    <div class="dropdown">
+                        <button class="dropbtn">Temas</button>
+                        <div class="dropdown-content">
+                            <a href="#">Anime</a>
+                            <a href="#">Filme</a>
+                            <a href="#">Jogo</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Camisetas</button>
+                        <div class="dropdown-content">
+                            <a href="#">Anime</a>
+                            <a href="#">Filme</a>
+                            <a href="#">Jogo</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Acessorios</button>
+                        <div class="dropdown-content">
+                            <a href="#">Anime</a>
+                            <a href="#">Filme</a>
+                            <a href="#">Jogo</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Presentes</button>
+                        <div class="dropdown-content">
+                            <a href="#">Anime</a>
+                            <a href="#">Filme</a>
+                            <a href="#">Jogo</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="container" id="corpo">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Cadastro</h3>
+                        <p>Por favor informe seus dados.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-12">
+                        <form>
+                            <div class="form-group">
+                                <label>*Nome: </label><input class="form-control" type="text1" id="txtnome" placeholder="Digite o seu nome completo" size="40" maxlength="55"/>    
+                                <label>*Email: </label><input class="form-control" type="email" id="txtemail" placeholder="xxx@xxx.com.br" size="40" maxlength="55" />
+                                <label>*Senha: </label><input class="form-control" type="password" id="senha1" placeholder="Digite sua senha" />
+                                <label>*Confirmar senha: </label><input class="form-control" type="password" id="senha2" placeholder="Digite a senha novamente" />
+                                <label>*CPF: </label><input class="form-control" type="cpf" id="txtcpf" placeholder="Digite o seu CPF"/>
+                                <label>*Telefone: </label><input class="form-control" type="cpf" id="txttel" placeholder="Digite o seu telefone" />
+                                    <p>As informações sobre endereço serão atualizadas durante a finalização do pedido</p>
+                                <div>
+                                        <button id="btn2" class="btn" onclick="validar();" ><b>Cadastrar</b></button>
+                                        <button id="btn2"class="btn"><b>Vitrine</b></button>
+                                    </div>
+                            </div>
+                        </form> 
+                    </div>
         </div>  
     </body>
 </html>

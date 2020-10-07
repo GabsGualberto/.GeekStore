@@ -1,12 +1,12 @@
 .container-fluid{
     background-color: #fafaff;
-    font-size: medium;
+    
 }
 
 .form-group button{
     width: 350px;
     height: 40px;
-    margin-top: 10px;
+    margin-bottom: 20px;
     border-radius: 20px;
     background-color: #20c997;
     color: #fafaff;
@@ -16,15 +16,11 @@
     height: 40px;
     margin-bottom: 15px;
 }
-.form-group input[type=checkbox]{
-    width: 20px;
-    height: 20px;
-    margin-left: 20px;
-    margin-right: 15px;
-}
+
 .form-control{
     border-radius: 10px;
 }
+
 .container-fluid button{
     background-color: transparent;
     border: none;
@@ -36,7 +32,6 @@
     background-color:#5fdfb4;
     text-align: center;
     width: 100%;
-    margin-top: -30px;
     height: 65px;
 }
 
@@ -93,9 +88,9 @@
     font-weight: 600;
 }
 #corpo p{
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 #menu button i{
@@ -180,6 +175,10 @@
     margin-left: 200px;
 }
 
+label{
+    width: 10%;
+    display: inline-table;
+}
 
 a{
     text-decoration: none;

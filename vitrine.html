@@ -13,117 +13,61 @@
         </head>
 
     <body>
-            <div class="container-fluid" >
-                <img id="logo" src="img/geekStore.png"> 
-                <input type="text" id="busca" placeholder="Buscar">
-                <img id="cadastro" src="img/cadastro2.png">
-            </div>
-            <div id="menu" class="MeuMenu">
-                <div class="dropdown">
-                    <button class="dropbtn">Temas</button>
-                    <div class="dropdown-content">
-                    <a href="#">Anime</a>
-                    <a href="#">Filme</a>
-                    <a href="#">Jogo</a>
-                    </div>
+        <div class="container-fluid" >
+            <div class="row" id="cabecalho">
+                <div class="col-lg-2 col-sm-3 col-3 col-md-3">
+                    <img id="logo" src="img/geekStore.png"> 
                 </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Camisetas</button>
-                    <div class="dropdown-content">
-                    <a href="#">Anime</a>
-                    <a href="#">Filme</a>
-                    <a href="#">Jogo</a>
-                    </div>
+                <div class="col-lg-6 col-sm-5 col-5 col-md-5">
+                    <input type="text" id="busca" placeholder="O que você está procurando?">
                 </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Acessorios</button>
-                    <div class="dropdown-content">
-                    <a href="#">Anime</a>
-                    <a href="#">Filme</a>
-                    <a href="#">Jogo</a>
-                    </div>
+                <div class="col-lg-2 col-sm-4 col-4  col-md-2">
+                    <button id="bt-conta"><i class="fa fa-user-circle fa-2x"></i></button>
                 </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Presentes</button>
-                    <div class="dropdown-content">
-                    <a href="#">Anime</a>
-                    <a href="#">Filme</a>
-                    <a href="#">Jogo</a>
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Perfil</button>
-                    <div class="dropdown-content">
-                    <a href="#">Meus Dados</a>
-                    <a href="#">Meu Carrinho</a>
-                    <a href="#">Meus Pedidos</a>
-                    </div>
-                </div>
-
-            </div>
-
-            
-            <div class="card-columns">
-                <div class="card" style="width:70%">
-                    <img class="card-img-top" src="img/produto01.png" alt="Card image">
-                    <div class="card-body">
-                        <h4 id="CardNome"  class="card-body text-center">Canecas</h4>
-                        <p class="card-text">R$20/cada</p>
-                        <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
-                        <button href="#"  class="btn btn-info" data-toggle="modal" data-target="#myModal">Comprar</button>
-                    </div>
-                </div>
-                <div class="card" style="width:70%">
-                    <img class="card-img-top" src="img/produto02.png" alt="Card image">
-                    <div class="card-body">
-                        <h4 id="CardNome"  class="card-body text-center">Miniaturas</h4>
-                        <p class="card-text">R$50/cada</p>
-                        <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
-                        <a href="#" class="btn btn-info">Comprar</a>
-                    </div>
-                </div>
-                <div class="card" style="width:70%">
-                    <img class="card-img-top" src="img/produto03.png" alt="Card image">
-                    <div class="card-body">
-                        <h4 id="CardNome" class="card-body text-center">Chaveiros</h4>
-                        <p class="card-text">R$5/cada</p>
-                        <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
-                        <a href="#" class="btn btn-info">Comprar</a>
-                    </div>
-                </div>
-                <div class="card" style="width:70%">
-                    <img class="card-img-top" src="img/produto04.png" alt="Card image">
-                    <div class="card-body">
-                        <h4 id="CardNome" class="card-body text-center">Bottons</h4>
-                        <p class="card-text">R$5/cada</p>
-                        <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
-                        <a href="#" class="btn btn-info">Comprar</a>
-                    </div>
-                </div>
-                <div class="card" style="width:70%">
-                    <img class="card-img-top" src="img/produto05.png" alt="Card image">
-                    <div class="card-body">
-                        <h4 class="card-body text-center">Camisetas</h4>
-                        <p class="card-text">R$50/cada</p>
-                        <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
-                        <a href="#" class="btn btn-info">Comprar</a>
-                    </div>
-                </div>
-                <div class="card" style="width:70%">
-                    <img class="card-img-top" src="img/produto06.png" alt="Card image">
-                    <div class="card-body">
-                        <h4 class="card-body text-center">Almofadas</h4>
-                        <p class="card-text">R$20/cada</p>
-                        <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
-                        <a href="#" id="bt1" class="btn btn-info">Comprar</a>
-                        <p id="teste"></p>
-                    </div>
+                <div class="col-lg-2  col-md-2">
+                    <button id="bt-carrinho"><i class="fa fa-shopping-cart fa-2x"></i></button>
                 </div>
             </div>
+            <div class="row" id="menu-dropdown">
+                <input type="checkbox" id="ch-menu">
+                <label for="ch-menu">&#9776;</label>
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="">Temas</a>
+                                <ul>
+                                    <li><a href="">Animes</a></li>
+                                    <li><a href="">Filmes</a></li>
+                                    <li><a href="">Jogos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Camisetas</a>
+                                <ul>
+                                    <li><a href="">Animes</a></li>
+                                    <li><a href="">Filmes</a></li>
+                                    <li><a href="">Jogos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Acessorios</a>
+                            <ul>
+                                <li><a href="">Animes</a></li>
+                                <li><a href="">Filmes</a></li>
+                                <li><a href="">Jogos</a></li>
+                            </ul>
+                         </li>
+                            <li><a href="">Presentes</a>
+                                <ul>
+                                    <li><a href="">Animes</a></li>
+                                    <li><a href="">Filmes</a></li>
+                                    <li><a href="">Jogos</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+            </div>
+                
+        </div>
+        
+           
 
             <!-- The Modal -->
 <div class="modal fade" id="myModal">
