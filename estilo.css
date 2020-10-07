@@ -308,3 +308,16 @@ input[type=text]:focus {
 
 }
 
+.nav{display: none;}
+
+#menuItens{
+  display:none;
+}
+.menuItens{
+  color: white;
+  background-color: #4AE3B0;
+  text-decoration: nome;
+}
+.margin-top{
+  margin-top: 2px;
+}

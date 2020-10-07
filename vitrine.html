@@ -16,13 +16,25 @@
         <div class="container-fluid" >
             <div class="row" id="cabecalho">
                 <div class="col-lg-2 col-sm-3 col-3 col-md-3">
-                    <img id="logo" src="img/geekStore.png"> 
+                        <img id="logo" src="img/geekStore.png">
+                                             
                 </div>
                 <div class="col-lg-6 col-sm-5 col-5 col-md-5">
                     <input type="text" id="busca" placeholder="O que você está procurando?">
                 </div>
                 <div class="col-lg-2 col-sm-4 col-4  col-md-2">
-                    <button id="bt-conta"><i class="fa fa-user-circle fa-2x"></i></button>
+                            <button id="btn-usuario" onclick="menuFunction()" ><i class="fa fa-user-circle fa-2x"></i></button>
+                            <div class="nav margin-top" style="display:none;">
+                                <ul id="menuesquerda">
+                                    <div class="row">
+                                        <a href="login.html" class="menuItens">Login</a>
+                                    </div>
+                                    <div class="row">
+                                        <a href="#" class="menuItens">Cadastro</a>
+                                    </div>
+                                </ul>
+                                
+                                </div>
                 </div>
                 <div class="col-lg-2  col-md-2">
                     <button id="bt-carrinho"><i class="fa fa-shopping-cart fa-2x"></i></button>
@@ -75,7 +87,7 @@
                             <h4 id="CardNome"  class="card-body text-center">Caneca Ninja.</h4>
                             <p>Desperte o ninja em você com essa caneca, dattebayo!</p>
                             <p class="card-text" style="font-size: 16px;font-weight: 600;">R$20,00</p>
-                            <a href="#" class="btn btn-success">Detalhes do produto</a>
+                            <a href="detalhes.html" class="btn btn-success">Detalhes do produto</a>
                             <button href="#"  class="btn btn-info" data-toggle="modal" data-target="#myModal">Comprar</button>
                         </div>
                     </div>
@@ -189,6 +201,32 @@
       </div>
     </div>
   </div>
+    <script>
+        $("#btn-usuario").click(function(){
+            if(!$(".nav").hasClass('open')){
+                openMenu();
+            }else{
+                CloseMenu();
+            }
+        });
+        function openMenu(){
+            $(function(){
+                $('.nav').addClass('open').show(300);
+            })
+        }
+        function CloseMenu(){
+            $(function(){
+                $('.nav').removeClass('open').hide(300)
+            })
+        }
+
+        
+
+
+
+    </script>
 
         </body>
+      
 </html>
+
