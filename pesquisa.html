@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>.GEEKSTORE/Busca</title>
-        <link rel="stylesheet" href="estilo.css" />
+        <link rel="stylesheet" href="pesquisa.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -62,19 +62,50 @@
                 </div>
 
             </div>
-            <div class="card-columns">
-                <div class="card" style="width:70%">
-                    <img class="card-img-top" src="img/produto01.png" alt="Card image">
-                    <div class="card-body">
-                        <h4 class="card-body text-center">Canecas</h4>
-                        <p class="card-text">R$20/cada</p>
-                        <a href="detalhes.html" class="btn btn-success">Detalhes do produto</a></br></br>
-                        <a href="#" class="btn btn-info">Comprar</a>
+        <div class="container">
+           <div class="row">
+               <div class="col-lg-4 col-md-6 col-sm-10 ">
+                    <div class="card ">
+                        <div class="card-header" >
+                            <img src="img/produto01.png" alt="" class="card-img-top">   
+                        </div>
+                        <div class="card-body">
+                            <h4 id="CardNome"  class="card-body text-center">Canecas</h4>
+                            <p class="card-text">R$20/cada</p>
+                            <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
+                            <button href="#"  class="btn btn-info" data-toggle="modal" data-target="#myModal">Comprar</button>
+                        </div>
                     </div>
                 </div>
-             </div>
+                <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="card ">
+                        <div class="card-header" >
+                            <img src="img/produto01.png" alt="" class="card-img-top">   
+                        </div>
+                        <div class="card-body">
+                            <h4 id="CardNome"  class="card-body text-center">Canecas</h4>
+                            <p class="card-text">R$20/cada</p>
+                            <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
+                            <button href="#"  class="btn btn-info" data-toggle="modal" data-target="#myModal">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card ">
+                        <div class="card-header" >
+                            <img src="img/produto01.png" alt="" class="card-img-top">   
+                        </div>
+                        <div class="card-body">
+                            <h4 id="CardNome"  class="card-body text-center">Canecas</h4>
+                            <p class="card-text">R$20/cada</p>
+                            <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
+                            <button href="#"  class="btn btn-info" data-toggle="modal" data-target="#myModal">Comprar</button>
+                        </div>
+                    </div>
+                </div>
 
-
+            </div>    
+        </div> 
 
 
 
@@ -91,7 +122,7 @@
             window.location = "pesquisa.html";
             }
             } 
-        </script>             
+    </script>             
                 
 </body>
 
