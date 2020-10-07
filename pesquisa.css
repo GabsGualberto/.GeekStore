@@ -1,24 +1,18 @@
+#cabecalho{
+  background-color: #4AE3B0;
+}
 
 #logo{
-        width: 10%;
-        margin-left: 100px;
-        margin-right: 100px;
+  width: 80px;
+  height: 80px;
+  margin: 2px;
+  margin-left: 80%;
 }
-    #cadastro{
-        width: 5%;
-        float: right;
-        margin-top:2%;
-        margin-right: 4%;
-    }
+#topo{
+  background-color: #4AE3B0;
+}
 
 /*------------*/
-.styleCard{
-    width: 70%;
-}
-.Divcar{
-    margin-top: 4%;
-}
-@media screen and (max-width: 1000px) {
     .card {
       width: 80%;
       margin-left: 2%;
@@ -26,8 +20,6 @@
       margin-top: 4%;
     }
 
-  }
-  
   @media screen and (max-width: 620px) {
     .container {
       width: 100%;

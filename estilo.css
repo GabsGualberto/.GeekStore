@@ -1,24 +1,7 @@
 
-.card-columns{
-    border: white;
-    margin-top: 10%;
-    margin-left: 10%;
-    
-}
-.card{
-  width: 800%;
-}
+
 .form-control{
     border-radius: 10px;
-}
-
-.card-img-top{
-    border: white;
-}
-
-.card-body{
-    border: white;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .container-fluid{
@@ -60,6 +43,9 @@
   height: 60px;
   background-color:#5fdfb4;
   font-family: Arial;
+  z-index: 999;
+        position: relative;
+  
 }
 .menu ul{
   list-style: none;
@@ -84,7 +70,6 @@
 }
 .menu ul li:hover ul{
   visibility: visible;
-  
 }
 .menu ul ul li{
   float: none;
@@ -115,7 +100,9 @@ label[for="ch-menu"]{
 .menu ul{
   background-color: #5fdfb4;
 }
-
+/*#temas{
+  margin-left: 30%;
+}*/
 
 #corpo{
   float: right;
@@ -241,6 +228,9 @@ input[type=text]:focus {
 }
 
 @media (max-width: 800px){
+  #temas{
+    margin-left: 0;
+  }
   label[for="ch-menu"]{
     display: block;
   }
