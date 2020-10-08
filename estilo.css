@@ -8,7 +8,9 @@
   text-align: center;
   border-style: none;
 }
-
+a:link{
+  text-decoration: none;
+}
 .card p{
 font-size: 13px;
 }
@@ -64,6 +66,7 @@ box-shadow: 0 2px 4px 0 rgba(43, 43, 43, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.2
 .menu ul{
   list-style: none;
   position: relative;
+  text-decoration:none;
 }
 .menu ul li{
   width: 150px;
@@ -90,6 +93,7 @@ box-shadow: 0 2px 4px 0 rgba(43, 43, 43, 0.2), 0 6px 20px 0 rgba(43, 43, 43, 0.2
 }
 .menu ul ul li a{
   background-color: #5fdfb4;
+  text-decoration:none;
 }
 label[for="ch-menu"]{
   padding: 5px;
@@ -249,7 +253,11 @@ input[type=text]:focus {
   width: 70%;
   border-color: transparent;
 }
-
+@media (max-width:990px){
+  #btn-usuario{
+    margin-left: 30px;
+  }
+}
 @media (max-width: 800px){
   #temas{
     margin-left: 0;

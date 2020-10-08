@@ -83,26 +83,14 @@
                             <img src="img/produto01.png" alt="" class="card-img-top">   
                         </div>
                         <div class="card-body">
-                            <h4 id="CardNome"  class="card-body text-center">Canecas</h4>
-                            <p class="card-text">R$20/cada</p>
+                            <h4 id="CardNome"  class="card-body text-center">Caneca Anime Ninja</h4>
+                            <p class="card-text">R$20   </p>
                             <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
                             <button href="#"  class="btn btn-info" data-toggle="modal" data-target="#myModal">Comprar</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="card ">
-                        <div class="card-header" >
-                            <img src="img/produto01.png" alt="" class="card-img-top">   
-                        </div>
-                        <div class="card-body">
-                            <h4 id="CardNome"  class="card-body text-center">Canecas</h4>
-                            <p class="card-text">R$20/cada</p>
-                            <a href="#" class="btn btn-success">Detalhes do produto</a></br></br>
-                            <button href="#"  class="btn btn-info" data-toggle="modal" data-target="#myModal">Comprar</button>
-                        </div>
-                    </div>
-                </div>
+               
 
             </div>    
         </div> 
@@ -118,7 +106,7 @@
             });
             function redirecionar() {
             var busca = document.getElementById("busca").value;
-            if (busca != "") {
+            if (busca == "") {
             window.location = "pesquisa.html";
             }
             }
