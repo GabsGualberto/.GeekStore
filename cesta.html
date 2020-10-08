@@ -19,14 +19,25 @@
     <div class="container-fluid" >
         <div class="row" id="cabecalho">
             <div class="col-lg-2 col-sm-3 col-3 col-md-3">
-                <img id="logo" src="img/geekStore.png"> 
+                <a href="vitrine.html"><img id="logo" src="img/geekStore.png"></a>
             </div>
             <div class="col-lg-6 col-sm-5 col-5 col-md-5">
                 <input type="text" id="busca" placeholder="O que você está procurando?">
             </div>
             <div class="col-lg-2 col-sm-4 col-4  col-md-2">
-                <button id="bt-conta"><i class="fa fa-user-circle fa-2x"></i></button>
-            </div>
+                <button id="btn-usuario" onclick="menuFunction()" ><i class="fa fa-user-circle fa-2x"></i></button>
+                <div class="nav margin-top" style="display:none;">
+                    <ul id="menuesquerda">
+                        <div class="row">
+                            <a href="login.html" class="menuItens">Login</a>
+                        </div>
+                        <div class="row">
+                            <a href="cadastroNovo.html" class="menuItens">Cadastro</a>
+                        </div>
+                    </ul>
+                    
+                    </div>
+    </div>
             <div class="col-lg-2  col-md-2">
                 <button id="bt-carrinho"><i class="fa fa-shopping-cart fa-2x"></i></button>
             </div>
@@ -131,14 +142,17 @@
                 <p id="p-cep"><a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="new">Não sei meu cep</a></p>
                 <p>As opções de envio serão atualizadas durante a finalização da compra. </p>
                 <p>Escolha o melhor frete para você:</p>
-                <p style="color: #ff0000"><b>Digite seu endereço para ver as opções de entrega.</b> </p>
-                <div hidden id="frete">
+                <div id="alerta-frete" class="alert alert-danger">
+                    Digite seu endereço para ver as opções de entrega.
+                  </div> 
+                <div  id="frete">
                     <label>
                         <div class="card" id="card-frete">
                             <div class="card-body">
                               <h5 class="card-title">Economica</h5>
-                              <p class="card-text">7 dias uteis <br><br> R$18,00</p>
-                              <input type="radio" name="frete" id="input-frete">
+                              <p class="card-text">7 dias uteis  </p>
+                              <p class="card-text" id="valor-frete">R$18.50</p>
+                              <input type="radio" name="frete" class="input-frete" id="input-frete">
                             </div>
                           </div>
                     </label>
@@ -146,8 +160,9 @@
                         <div class="card" id="card-frete">
                             <div class="card-body">
                               <h5 class="card-title">correios</h5>
-                              <p class="card-text">20 dias uteis <br><br> R$28,00</p>
-                              <input type="radio" name="frete" id="input-frete">
+                              <p class="card-text">20 dias uteis  </p>
+                              <p id="valor-frete" class="card-text">R$28.00</p>
+                              <input type="radio" class ="input-frete"name="frete" id="input-frete">
                             </div>
                           </div>
                     </label>
@@ -157,6 +172,7 @@
                 <h4>Resumo do pedido</h4>
                 <br>
                 <p id="quantidade-preco">1 produto                  R$20,00</p>
+                <p id="p-frete">Frete                  R$0,00</p>
                 <br>
                 <p id="total"><b>Total                      R$20,00</b></p>
                 <button class="btn btn-primary" id="bt-finalizar">Finalizar Pedido</button>
@@ -175,24 +191,33 @@
 </body>
 </html>
 <script lang="javascript">
-    $(document).ready(function(){
+  
+    function atualizaDados(){
         var rows = $("#tabela-itens tbody tr").length;
         var subt=0;
+        var total=0;
+        
         $("#tabela-itens tbody tr").each(function(){
             subt+=parseFloat($(this).closest('tr').find(".subtotal").text());
         });
         $("#quantidade-preco").text(rows+" produtos                  R$"+subt);
-        $("#total").text("Total                      R$"+subt);
+        total = subt + parseFloat($("#p-frete").text().replace(/[^0-9,.]/g,''));
+        $("#total").text("Total                      R$"+total);
+       
+    }
+    $(document).ready(function(){
+        atualizaDados();
     });
-
     $(".btn-remover").click(function(){
         $(this).closest('tr').remove();
+        atualizaDados();
     });
     $(".btn-mais").click(function(){
       var qtde = $(this).closest('#quantidadeProduto').find(".input-quantidade").val();
       var gambiarra = parseFloat(qtde) + 1;
       $(this).closest('tr').find(".subtotal").text(parseFloat($(this).closest('tr').find(".item-preco").text())*gambiarra);
       $(this).closest('#quantidadeProduto').find(".input-quantidade").val(gambiarra);
+      atualizaDados();
       
     });
     $(".btn-menos").click(function(){
@@ -202,9 +227,11 @@
             gambiarra--;
             if(gambiarra<=0){
                 $(this).closest('tr').remove();
+                atualizaDados();
             }else{
                 $(this).closest('tr').find(".subtotal").text(parseFloat($(this).closest('tr').find(".item-preco").text())*gambiarra);
                 $(this).closest('#quantidadeProduto').find(".input-quantidade").val(gambiarra);
+                atualizaDados();
             }
       }
     });
@@ -222,4 +249,54 @@
     window.location = "pesquisa.html";
     }
     } 
-</script>    
+
+        $("#btn-usuario").click(function(){
+            if(!$(".nav").hasClass('open')){
+                openMenu();
+            }else{
+                CloseMenu();
+            }
+        });
+        function openMenu(){
+            $(function(){
+                $('.nav').addClass('open').show(300);
+            })
+        }
+        function CloseMenu(){
+            $(function(){
+                $('.nav').removeClass('open').hide(300)
+            })
+        }
+        
+        var busca= document.getElementById("busca");
+    busca.addEventListener("keydown",function(e){
+        if (e.keyCode ==13) {
+            redirecionar(e);
+        }
+    });
+    function redirecionar() {
+    var busca = document.getElementById("busca").value;
+    if (busca != "") {
+    window.location = "pesquisa.html";
+    }
+    } 
+</script>
+<script lang="javascript">
+    $("#bt-ok").click(function(){   
+        if($("#input-cep").val() < 9 || $("#input-cep").val().indexOf("-") < 4 || $("#input-cep").val().indexOf("-") > 6){
+            alert("digite um cep valido");
+        }else{
+            $("#frete").css("visibility","visible");
+            $("#alerta-frete").hide();
+        }
+    });
+</script>
+<script lang="javascript">
+        $(".input-frete").click(function(){
+        var valor= $(this).closest('.card').find('#valor-frete').text();
+        valor = valor.replace(/[^0-9,.]/g,'');
+        $("#p-frete").text("Frete R$"+ valor);
+        atualizaDados();
+    });
+
+</script>

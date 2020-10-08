@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>esqueciSenha</title>
+        <link rel="stylesheet" href="login.css" />
+        <link rel="stylesheet" href="estilo.css" />
+        <script src="jquery-3.5.1.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </head>
+
+    <body>
+        <div class="container-fluid" >
+            <div class="row" id="cabecalho">
+                <div class="col-lg-2 col-sm-3 col-3 col-md-3">
+                    <a href="vitrine.html"><img id="logo" src="img/geekStore.png"></a>
+                </div>
+                <div class="col-lg-6 col-sm-5 col-5 col-md-5">
+                    <input type="text" id="busca" placeholder="O que você está procurando?">
+                </div>
+                <div class="col-lg-2 col-sm-4 col-4  col-md-2">
+                    <button id="btn-usuario" onclick="menuFunction()" ><i class="fa fa-user-circle fa-2x"></i></button>
+                    <div class="nav margin-top" style="display:none;">
+                        <ul id="menuesquerda">
+                            <div class="row">
+                                <a href="login.html" class="menuItens">Login</a>
+                            </div>
+                            <div class="row">
+                                <a href="cadastroNovo.html" class="menuItens">Cadastro</a>
+                            </div>
+                        </ul>
+                        
+                        </div>
+        </div>
+                <div class="col-lg-2  col-md-2">
+                    <button id="bt-carrinho"><i class="fa fa-shopping-cart fa-2x"></i></button>
+                </div>
+            </div>
+            <div class="row" id="menu-dropdown">
+                <input type="checkbox" id="ch-menu">
+                <label for="ch-menu">&#9776;</label>
+                    <nav class="menu">
+                        <ul>
+                            <li id="temas"><a href="">Temas</a>
+                                <ul>
+                                    <li><a href="">Animes</a></li>
+                                    <li><a href="">Filmes</a></li>
+                                    <li><a href="">Jogos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Camisetas</a>
+                                <ul>
+                                    <li><a href="">Animes</a></li>
+                                    <li><a href="">Filmes</a></li>
+                                    <li><a href="">Jogos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Acessorios</a>
+                            <ul>
+                                <li><a href="">Animes</a></li>
+                                <li><a href="">Filmes</a></li>
+                                <li><a href="">Jogos</a></li>
+                            </ul>
+                         </li>
+                            <li><a href="">Presentes</a>
+                                <ul>
+                                    <li><a href="">Animes</a></li>
+                                    <li><a href="">Filmes</a></li>
+                                    <li><a href="">Jogos</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+            </div>
+           
+        </div>
+                <div class="container" id="corpo">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-lg-12">
+                            <h2>Esqueci Minha Senha</h2>
+                            <p>Preencha o campo para receber o codigo de verificação</p>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-lg12">
+                            <form class="form-group">
+                                <label>Email: </label><input class="form-control" type="email" id="txtemail" placeholder="xxx@xxx.com.br" size="40" maxlength="55" />
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+</html>
+<script lang="javascript">
+    $("#bt-menu").click(function(){
+        alert("sad");
+    });
+
+        $("#btn-usuario").click(function(){
+            if(!$(".nav").hasClass('open')){
+                openMenu();
+            }else{
+                CloseMenu();
+            }
+        });
+        function openMenu(){
+            $(function(){
+                $('.nav').addClass('open').show(300);
+            })
+        }
+        function CloseMenu(){
+            $(function(){
+                $('.nav').removeClass('open').hide(300)
+            })
+        }
+
+        var busca= document.getElementById("busca");
+    busca.addEventListener("keydown",function(e){
+        if (e.keyCode ==13) {
+            redirecionar(e);
+        }
+    });
+    function redirecionar() {
+    var busca = document.getElementById("busca").value;
+    if (busca != "") {
+    window.location = "pesquisa.html";
+    }
+    } 
+
+</script>
