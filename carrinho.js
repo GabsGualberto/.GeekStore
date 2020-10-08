@@ -5,13 +5,13 @@ function validarPagamento(){
         txtnome.focus;
         return false;
     }
-    if(cartao.value == "" || cartao.value.length < 15){
+    if(cartao.value == "" || cartao.value.length < 15 || isNaN(cartao.value)){
         alert("Numero de cartao invalido!");
         txtnome.value = "";
         txtnome.focus;
         return false;
     }
-    if(cvv.value == "" || cvv.value.length != 3){
+    if(cvv.value == "" || cvv.value.length != 3 || isNaN(cvv.value)){
         alert("cvv invalido!");
         txtnome.value = "";
         txtnome.focus;

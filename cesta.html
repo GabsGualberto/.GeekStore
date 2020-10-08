@@ -219,7 +219,7 @@
                 <p id="p-frete">Frete                  R$0,00</p>
                 <br>
                 <p id="total"><b>Total                      R$20,00</b></p>
-                <button class="btn btn-primary" id="bt-finalizar" data-toggle="modal" data-target="#myModal">Finalizar Pedido</button>
+                <button class="btn btn-primary" id="bt-finalizar">Finalizar Pedido</button>
                 <br>
                 <p id="dez-conto">Possui cupom de desconto?
                     Você poderá usá-los na etapa de pagamento. </p>
@@ -271,6 +271,13 @@
 </body>
 </html>
 <script lang="javascript">
+    $("#bt-finalizar").click(function(){
+        if(parseFloat($("#p-frete").text().replace(/[^0-9,.]/g,''))<=0){
+            alert("Por favor escolha uma opção de envio");
+        }else{
+            $("#myModal").modal('show');
+        }
+    })
     function atualizaDados(){
         var rows = $("#tabela-itens tbody tr").length;
         var subt=0;
@@ -283,6 +290,7 @@
         if(subt<=0){
             $("#p-frete").text("Frete R$00,00");
         }
+        
         total = subt + parseFloat($("#p-frete").text().replace(/[^0-9,.]/g,''));
         $("#total").text("Total                      R$"+total);
        
