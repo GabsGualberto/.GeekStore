@@ -41,4 +41,5 @@ function validar(){
         txttel.focus();
         return false;
     }
+    
 }

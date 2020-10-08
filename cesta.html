@@ -91,7 +91,7 @@
         
         <div class="row">
             <div class="col-12">
-                <div id="alerta" class="alert alert-success" role="alert">Os itens foram adicionados ao seu carrinho.<a class="alert-link" href="http://">Clique aqui</a> para continuar comprando</div>
+                <div id="alerta" class="alert alert-success" role="alert">Os itens foram adicionados ao seu carrinho.<a class="alert-link" href="vitrine.html">Clique aqui</a> para continuar comprando</div>
             </div>
         </div>
         <div class="row">
@@ -219,23 +219,58 @@
                 <p id="p-frete">Frete                  R$0,00</p>
                 <br>
                 <p id="total"><b>Total                      R$20,00</b></p>
-                <button class="btn btn-primary" id="bt-finalizar">Finalizar Pedido</button>
+                <button class="btn btn-primary" id="bt-finalizar" data-toggle="modal" data-target="#myModal">Finalizar Pedido</button>
                 <br>
                 <p id="dez-conto">Possui cupom de desconto?
                     Você poderá usá-los na etapa de pagamento. </p>
             </div>
         </div>
     </div>
-    <div class="container-fluid" id="rodape">
-        <div class="row" id="rodape">
-            <p> © 2020 - Todos os direitos reservados.</p> 
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Finalizar compra</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form>
+                  <div class="row">
+                      <div class="col">
+                        <label for="nome">Nome Titular</label><input type="text" class="form-control" id="nome" placeholder="Nome do Titular" required>
+                      </div>
+                      <div class="col">
+                        <label for="nome">Numero do Cartao</label><input type="text" class="form-control" id="cartao" placeholder="Numero do cartão" required>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <label for="nome">CVV</label><input type="text" class="form-control" id="cvv" placeholder="CVV" required>
+                    </div>
+                    <div class="col">
+                      <label for="nome">Vencimento</label><input type="text" class="form-control" id="vencimento" placeholder="mm/aa" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <br>
+                        <button type="button" class="btn btn-primary"  onclick="validarPagamento();">Finalizar Pedido</button>
+                    </div>
+                    <div class="col">
+                        <br>
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Fechar</button>
+                    </div>
+                    
+                </div>
+              </form>
+            </div>
+                   
+          </div>
         </div>
-    </div>
-    
+      </div>
 </body>
 </html>
 <script lang="javascript">
-  
     function atualizaDados(){
         var rows = $("#tabela-itens tbody tr").length;
         var subt=0;
@@ -347,6 +382,7 @@
     });
 
 </script>
+
 <style type="text/css">
     a:link
     {

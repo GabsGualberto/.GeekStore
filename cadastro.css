@@ -2,7 +2,9 @@
     background-color: #fafaff;
     
 }
-
+.container-fluid #btn2{
+    background-color: #20c997;
+}
 .form-group button{
     width: 350px;
     height: 40px;
