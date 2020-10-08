@@ -85,7 +85,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <table class="table table-striped table-hover table-bordered table-responsive-sm" id="tabelaItens">
+                <table class="table table-striped table-hover table-bordered table-responsive-sm" id="tabela-itens">
                     <thead>
                         <tr>
                             <th>Produto</th>
@@ -98,24 +98,24 @@
                     <tbody>
                         <tr>
                             <td id="produto-imagem"><img src="img/produto02.png">Boneco</td>
-                            <td id="itemPreco">30,00</td>
+                            <td class="item-preco">30,00</td>
                             <td  id="quantidadeProduto">
                                 <button id="bt-mais" class="btn btn-mais"><i class="fa fa-plus fa-xs"></i></button>
-                                <input class="input-quantidade" type="text" maxlength="5" readonly placeholder="1"/>
-                                <button id="bt-menos btn-menos" class="btn"><i class="fa fa-minus fa-xs"></i></button>
+                                <input class="input-quantidade" type="text" maxlength="5" readonly  value="1"/>
+                                <button id="bt-menos" class="btn  btn-menos"><i class="fa fa-minus fa-xs"></i></button>
                             </td>
-                            <td >30,00</td>
+                            <td class="subtotal">30,00</td>
                             <td ><button id="bt-remover"class="btn btn-remover"><i class="fa fa-trash fa-xs "></i></button></td>
                         </tr>
                         <tr>
                             <td id="produto-imagem"><img src="img/produto01.png"> Caneca personalizada</td>
-                            <td id="itemPreco">20,00</td>
+                            <td class="item-preco">60,00</td>
                             <td  id="quantidadeProduto">
                                 <button id="bt-mais" class="btn btn-mais"><i class="fa fa-plus fa-xs"></i></button>
-                                <input type="text" maxlength="5" readonly placeholder="1"/>
-                                <button id="bt-menos" class="btn"><i class="fa fa-minus fa-xs"></i></button>
+                                <input type="text" class="input-quantidade" maxlength="5" readonly  value="1"/>
+                                <button id="bt-menos" class="btn btn-menos"><i class="fa fa-minus fa-xs"></i></button>
                             </td>
-                            <td >20,00</td>
+                            <td class="subtotal">70,00</td>
                             <td ><button id="bt-remover"class="btn btn-remover"><i class="fa fa-trash fa-xs "></i></button></td>
                         </tr>
                         
@@ -156,9 +156,9 @@
             <div class="col-lg-3 col-sm-12" id="resumoPedido">
                 <h4>Resumo do pedido</h4>
                 <br>
-                <p>1 produto                  R$20,00</p>
+                <p id="quantidade-preco">1 produto                  R$20,00</p>
                 <br>
-                <p><b>Total                      R$20,00</b></p>
+                <p id="total"><b>Total                      R$20,00</b></p>
                 <button class="btn btn-primary" id="bt-finalizar">Finalizar Pedido</button>
                 <br>
                 <p id="dez-conto">Possui cupom de desconto?
@@ -175,12 +175,38 @@
 </body>
 </html>
 <script lang="javascript">
+    $(document).ready(function(){
+        var rows = $("#tabela-itens tbody tr").length;
+        var subt=0;
+        $("#tabela-itens tbody tr").each(function(){
+            subt+=parseFloat($(this).closest('tr').find(".subtotal").text());
+        });
+        $("#quantidade-preco").text(rows+" produtos                  R$"+subt);
+        $("#total").text("Total                      R$"+subt);
+    });
+
     $(".btn-remover").click(function(){
         $(this).closest('tr').remove();
     });
     $(".btn-mais").click(function(){
-       let qtde = $(this).closest('input').val() = 1;
-       $(this).closest('input').val() = parseFloat(qtde) + 1;
+      var qtde = $(this).closest('#quantidadeProduto').find(".input-quantidade").val();
+      var gambiarra = parseFloat(qtde) + 1;
+      $(this).closest('tr').find(".subtotal").text(parseFloat($(this).closest('tr').find(".item-preco").text())*gambiarra);
+      $(this).closest('#quantidadeProduto').find(".input-quantidade").val(gambiarra);
+      
+    });
+    $(".btn-menos").click(function(){
+      var qtde = $(this).closest('#quantidadeProduto').find(".input-quantidade").val();   
+      var gambiarra = parseFloat(qtde);
+      if(gambiarra>0){
+            gambiarra--;
+            if(gambiarra<=0){
+                $(this).closest('tr').remove();
+            }else{
+                $(this).closest('tr').find(".subtotal").text(parseFloat($(this).closest('tr').find(".item-preco").text())*gambiarra);
+                $(this).closest('#quantidadeProduto').find(".input-quantidade").val(gambiarra);
+            }
+      }
     });
 </script>
 <script type="text/javascript" language="javascript">

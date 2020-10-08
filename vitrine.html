@@ -68,6 +68,9 @@
         </div>
         <div class="container">
             <div class="row">
+                <h1>Confira os itens mais incriveis da Internet!</h1>
+            </div>
+            <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-10">
                     <div class="card ">
                         <div class="card-body">
@@ -192,3 +195,17 @@
 
         </body>
 </html>
+<script type="text/javascript" language="javascript">
+    var busca= document.getElementById("busca");
+    busca.addEventListener("keydown",function(e){
+        if (e.keyCode ==13) {
+            redirecionar(e);
+        }
+    });
+    function redirecionar() {
+    var busca = document.getElementById("busca").value;
+    if (busca != "") {
+    window.location = "pesquisa.html";
+    }
+    } 
+</script>             
