@@ -108,25 +108,69 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td id="produto-imagem"><img src="img/produto02.png">Boneco</td>
-                            <td class="item-preco">30,00</td>
+                            <td id="produto-imagem"><img src="img/produto02.png">Miniaturas colecionaveis Super Mario</td>
+                            <td class="item-preco">50,00</td>
                             <td  id="quantidadeProduto">
                                 <button id="bt-mais" class="btn btn-mais"><i class="fa fa-plus fa-xs"></i></button>
                                 <input class="input-quantidade" type="text" maxlength="5" readonly  value="1"/>
                                 <button id="bt-menos" class="btn  btn-menos"><i class="fa fa-minus fa-xs"></i></button>
                             </td>
-                            <td class="subtotal">30,00</td>
+                            <td class="subtotal">50,00</td>
                             <td ><button id="bt-remover"class="btn btn-remover"><i class="fa fa-trash fa-xs "></i></button></td>
                         </tr>
                         <tr>
-                            <td id="produto-imagem"><img src="img/produto01.png"> Caneca personalizada</td>
-                            <td class="item-preco">60,00</td>
+                            <td id="produto-imagem"><img src="img/produto01.png"> Caneca Anime Ninja</td>
+                            <td class="item-preco">20,00</td>
                             <td  id="quantidadeProduto">
                                 <button id="bt-mais" class="btn btn-mais"><i class="fa fa-plus fa-xs"></i></button>
                                 <input type="text" class="input-quantidade" maxlength="5" readonly  value="1"/>
                                 <button id="bt-menos" class="btn btn-menos"><i class="fa fa-minus fa-xs"></i></button>
                             </td>
-                            <td class="subtotal">70,00</td>
+                            <td class="subtotal">20,00</td>
+                            <td ><button id="bt-remover"class="btn btn-remover"><i class="fa fa-trash fa-xs "></i></button></td>
+                        </tr>
+                        <tr>
+                            <td id="produto-imagem"><img src="img/produto05.png">Camisetas Marvel</td>
+                            <td class="item-preco">50,00</td>
+                            <td  id="quantidadeProduto">
+                                <button id="bt-mais" class="btn btn-mais"><i class="fa fa-plus fa-xs"></i></button>
+                                <input class="input-quantidade" type="text" maxlength="5" readonly  value="1"/>
+                                <button id="bt-menos" class="btn  btn-menos"><i class="fa fa-minus fa-xs"></i></button>
+                            </td>
+                            <td class="subtotal">50,00</td>
+                            <td ><button id="bt-remover"class="btn btn-remover"><i class="fa fa-trash fa-xs "></i></button></td>
+                        </tr>
+                        <tr>
+                            <td id="produto-imagem"><img src="img/produto03.png"> Chaveiro Kimetsu no Yaiba</td>
+                            <td class="item-preco">5,00</td>
+                            <td  id="quantidadeProduto">
+                                <button id="bt-mais" class="btn btn-mais"><i class="fa fa-plus fa-xs"></i></button>
+                                <input type="text" class="input-quantidade" maxlength="5" readonly  value="1"/>
+                                <button id="bt-menos" class="btn btn-menos"><i class="fa fa-minus fa-xs"></i></button>
+                            </td>
+                            <td class="subtotal">5,00</td>
+                            <td ><button id="bt-remover"class="btn btn-remover"><i class="fa fa-trash fa-xs "></i></button></td>
+                        </tr>
+                        <tr>
+                            <td id="produto-imagem"><img src="img/produto04.png">Bottons de anime</td>
+                            <td class="item-preco">5,00</td>
+                            <td  id="quantidadeProduto">
+                                <button id="bt-mais" class="btn btn-mais"><i class="fa fa-plus fa-xs"></i></button>
+                                <input class="input-quantidade" type="text" maxlength="5" readonly  value="1"/>
+                                <button id="bt-menos" class="btn  btn-menos"><i class="fa fa-minus fa-xs"></i></button>
+                            </td>
+                            <td class="subtotal">5,00</td>
+                            <td ><button id="bt-remover"class="btn btn-remover"><i class="fa fa-trash fa-xs "></i></button></td>
+                        </tr>
+                        <tr>
+                            <td id="produto-imagem"><img src="img/produto06.png"> Almofadas Star Wars</td>
+                            <td class="item-preco">20,00</td>
+                            <td  id="quantidadeProduto">
+                                <button id="bt-mais" class="btn btn-mais"><i class="fa fa-plus fa-xs"></i></button>
+                                <input type="text" class="input-quantidade" maxlength="5" readonly  value="1"/>
+                                <button id="bt-menos" class="btn btn-menos"><i class="fa fa-minus fa-xs"></i></button>
+                            </td>
+                            <td class="subtotal">20,00</td>
                             <td ><button id="bt-remover"class="btn btn-remover"><i class="fa fa-trash fa-xs "></i></button></td>
                         </tr>
                         
@@ -201,6 +245,9 @@
             subt+=parseFloat($(this).closest('tr').find(".subtotal").text());
         });
         $("#quantidade-preco").text(rows+" produtos                  R$"+subt);
+        if(subt<=0){
+            $("#p-frete").text("Frete R$00,00");
+        }
         total = subt + parseFloat($("#p-frete").text().replace(/[^0-9,.]/g,''));
         $("#total").text("Total                      R$"+total);
        
@@ -300,3 +347,10 @@
     });
 
 </script>
+<style type="text/css">
+    a:link
+    {
+    text-decoration:none;
+   
+    }
+    </style>
